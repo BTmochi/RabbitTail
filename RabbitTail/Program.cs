@@ -16,7 +16,7 @@ namespace RabbitTail
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new oauthForm());
+            Application.Run(Home.GetInstance());
         }
     }
 }

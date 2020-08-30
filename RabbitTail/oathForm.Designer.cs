@@ -1,6 +1,6 @@
 ﻿namespace RabbitTail
 {
-    partial class oauthForm
+    partial class OauthForm
     {
         /// <summary>
         /// 必要なデザイナー変数です。
@@ -28,64 +28,123 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button_oath = new System.Windows.Forms.Button();
-            this.label_oath = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.Label_oath = new System.Windows.Forms.Label();
+            this.TitleBar = new System.Windows.Forms.Panel();
+            this.CloseButton = new System.Windows.Forms.Button();
+            this.Label_PinCode = new System.Windows.Forms.Label();
+            this.Button_oath = new System.Windows.Forms.Button();
+            this.TextPinCode = new System.Windows.Forms.TextBox();
+            this.TitleBar.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button_oath
+            // Label_oath
             // 
-            this.button_oath.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.button_oath.FlatAppearance.BorderSize = 0;
-            this.button_oath.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_oath.ForeColor = System.Drawing.Color.Silver;
-            this.button_oath.Location = new System.Drawing.Point(302, 306);
-            this.button_oath.Name = "button_oath";
-            this.button_oath.Size = new System.Drawing.Size(171, 60);
-            this.button_oath.TabIndex = 0;
-            this.button_oath.Text = "認証";
-            this.button_oath.UseVisualStyleBackColor = false;
+            this.Label_oath.AutoSize = true;
+            this.Label_oath.Font = new System.Drawing.Font("MS UI Gothic", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Label_oath.ForeColor = System.Drawing.Color.Silver;
+            this.Label_oath.Location = new System.Drawing.Point(10, 9);
+            this.Label_oath.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.Label_oath.Name = "Label_oath";
+            this.Label_oath.Size = new System.Drawing.Size(95, 19);
+            this.Label_oath.TabIndex = 1;
+            this.Label_oath.Text = "OAth認証";
             // 
-            // label_oath
+            // TitleBar
             // 
-            this.label_oath.AutoSize = true;
-            this.label_oath.Font = new System.Drawing.Font("MS UI Gothic", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label_oath.ForeColor = System.Drawing.Color.Silver;
-            this.label_oath.Location = new System.Drawing.Point(146, 180);
-            this.label_oath.Name = "label_oath";
-            this.label_oath.Size = new System.Drawing.Size(178, 37);
-            this.label_oath.TabIndex = 1;
-            this.label_oath.Text = "OAth認証";
+            this.TitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.TitleBar.Controls.Add(this.CloseButton);
+            this.TitleBar.Controls.Add(this.Label_oath);
+            this.TitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TitleBar.Location = new System.Drawing.Point(0, 0);
+            this.TitleBar.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.TitleBar.Name = "TitleBar";
+            this.TitleBar.Size = new System.Drawing.Size(227, 35);
+            this.TitleBar.TabIndex = 2;
             // 
-            // panel1
+            // CloseButton
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(0)))));
-            this.panel1.Location = new System.Drawing.Point(-2, -5);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(799, 85);
-            this.panel1.TabIndex = 2;
+            this.CloseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.CloseButton.FlatAppearance.BorderSize = 0;
+            this.CloseButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.IndianRed;
+            this.CloseButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
+            this.CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CloseButton.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.CloseButton.ForeColor = System.Drawing.Color.White;
+            this.CloseButton.Location = new System.Drawing.Point(188, 0);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(38, 35);
+            this.CloseButton.TabIndex = 2;
+            this.CloseButton.Text = "✕";
+            this.CloseButton.UseVisualStyleBackColor = false;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
-            // oauthForm
+            // Label_PinCode
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
+            this.Label_PinCode.AutoSize = true;
+            this.Label_PinCode.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Label_PinCode.ForeColor = System.Drawing.Color.Silver;
+            this.Label_PinCode.Location = new System.Drawing.Point(10, 73);
+            this.Label_PinCode.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.Label_PinCode.Name = "Label_PinCode";
+            this.Label_PinCode.Size = new System.Drawing.Size(74, 16);
+            this.Label_PinCode.TabIndex = 3;
+            this.Label_PinCode.Text = "PINコード";
+            // 
+            // Button_oath
+            // 
+            this.Button_oath.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.Button_oath.FlatAppearance.BorderSize = 0;
+            this.Button_oath.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_oath.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Button_oath.ForeColor = System.Drawing.Color.White;
+            this.Button_oath.Location = new System.Drawing.Point(144, 118);
+            this.Button_oath.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.Button_oath.Name = "Button_oath";
+            this.Button_oath.Size = new System.Drawing.Size(67, 25);
+            this.Button_oath.TabIndex = 0;
+            this.Button_oath.Text = "認証";
+            this.Button_oath.UseVisualStyleBackColor = false;
+            this.Button_oath.Click += new System.EventHandler(this.Button_oath_Click);
+            // 
+            // TextPinCode
+            // 
+            this.TextPinCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.TextPinCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextPinCode.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.TextPinCode.ForeColor = System.Drawing.Color.White;
+            this.TextPinCode.Location = new System.Drawing.Point(88, 73);
+            this.TextPinCode.Name = "TextPinCode";
+            this.TextPinCode.Size = new System.Drawing.Size(123, 16);
+            this.TextPinCode.TabIndex = 4;
+            // 
+            // OauthForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(795, 644);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label_oath);
-            this.Controls.Add(this.button_oath);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.ClientSize = new System.Drawing.Size(227, 154);
+            this.Controls.Add(this.TextPinCode);
+            this.Controls.Add(this.Label_PinCode);
+            this.Controls.Add(this.TitleBar);
+            this.Controls.Add(this.Button_oath);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "oauthForm";
+            this.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.Name = "OauthForm";
+            this.Load += new System.EventHandler(this.OauthForm_Load);
+            this.TitleBar.ResumeLayout(false);
+            this.TitleBar.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button_oath;
-        private System.Windows.Forms.Label label_oath;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label Label_oath;
+        private System.Windows.Forms.Panel TitleBar;
+        private System.Windows.Forms.Button CloseButton;
+        private System.Windows.Forms.Label Label_PinCode;
+        private System.Windows.Forms.Button Button_oath;
+        private System.Windows.Forms.TextBox TextPinCode;
     }
 }
 
