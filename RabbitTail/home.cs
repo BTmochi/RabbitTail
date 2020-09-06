@@ -73,7 +73,7 @@ namespace RabbitTail
         /// <param name="e"></param>
         private void CloseButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            EndHome();
         }
 
         /// <summary>
@@ -88,8 +88,15 @@ namespace RabbitTail
             {
                 TweetInfo.GetInstance().AuthorizeApplication();
                 OauthForm.GetInstance().Show();
-                this.Enabled = false;
             }
+        }
+
+        /// <summary>
+        /// 終了処理
+        /// </summary>
+        private void EndHome()
+        {
+            this.Close();
         }
         #endregion
 
@@ -111,13 +118,32 @@ namespace RabbitTail
 
         private void EnabledTimer_Tick(object sender, EventArgs e)
         {
-            if (TextBoxTweet.Text == "")
+            //if (TextBoxTweet.Text == "")
+            //{
+            //    // 後で修正
+            //    ButtonSendTweet.Enabled = true;
+            //}
+            //else
+            //{
+            //    ButtonSendTweet.Enabled = true;
+            //}
+        }
+
+        private void ButtonTimeLine_Click(object sender, EventArgs e)
+        {
+            ButtonTimeLine.Enabled = false;
+        }
+
+        private void ButtonTimeLine_EnabledChanged(object sender, EventArgs e)
+        {
+            if (ButtonTimeLine.Enabled)
             {
-                ButtonTweet.Enabled = false;
+                ButtonTimeLine.BackColor = Color.FromArgb(30, 30, 30);
             }
             else
             {
-                ButtonTweet.Enabled = true;
+                ButtonTimeLine.BackColor = Color.FromArgb(20, 20, 20);
+                ButtonTimeLine.ForeColor = Color.FromArgb(20, 20, 20);
             }
         }
     }

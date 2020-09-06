@@ -68,11 +68,19 @@ namespace RabbitTail
             if (Regex.IsMatch(_pinCode, @"^\d+$"))
             {
                 tokens = OAuth.GetTokens(session, _pinCode);
+
+                Properties.Settings.Default.tokens = tokens;
+                Properties.Settings.Default.Save();
+
                 result = true;
             }
             return result;
         }
 
+        /// <summary>
+        /// ツイート
+        /// </summary>
+        /// <param name="_text"></param>
         public void Tweet(string _text)
         {
             tokens.Statuses.Update(status => _text);
